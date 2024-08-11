@@ -35,7 +35,9 @@
             @foreach($books as $book)
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                    <img src="{{ asset('storage/' . $book->cover_image) }}" alt="{{ $book->title }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+                        <div class="image-container" style="height: 220px;">
+                            <img src="{{ Storage::url($book->cover_image) }}" alt="{{ $book->title }}" class="card-img-top" style="height: 100%; width: 100%; object-fit: contain;">
+                        </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-primary">{{ $book->title }}</h5>
                             <p class="card-text text-muted">{{ Str::limit($book->description, 80) }}</p>

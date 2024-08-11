@@ -15,7 +15,7 @@
                         <div class="mb-4">
                             <label for="email" class="form-label fw-semibold">{{ __('Email Address') }}</label>
                             <div class="input-group">
-                                <span class="input-group-text bg-light border-0"><i class="bi bi-envelope-fill"></i></span>
+                                <span class="input-group-text bg-light border-0"><i class="bi bi-envelope-fill text-primary"></i></span>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror border-0 shadow-sm" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="you@example.com">
                                 @error('email')
                                     <div class="invalid-feedback">
@@ -28,7 +28,7 @@
                         <div class="mb-4">
                             <label for="password" class="form-label fw-semibold">{{ __('Password') }}</label>
                             <div class="input-group">
-                                <span class="input-group-text bg-light border-0"><i class="bi bi-lock-fill"></i></span>
+                                <span class="input-group-text bg-light border-0"><i class="bi bi-lock-fill text-primary"></i></span>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror border-0 shadow-sm" name="password" required autocomplete="current-password" placeholder="Your password">
                                 @error('password')
                                     <div class="invalid-feedback">
@@ -61,7 +61,7 @@
                         <hr class="my-4">
 
                         <div class="text-center">
-                            <p class="mb-0">Don't have an account? 
+                            <p class="mb-0">{{ __('Don\'t have an account?') }}
                                 <a class="text-primary fw-semibold" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                             </p>
                         </div>

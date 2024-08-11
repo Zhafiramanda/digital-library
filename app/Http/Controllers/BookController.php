@@ -46,7 +46,7 @@ class BookController extends Controller
             'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string',
             'quantity' => 'required|integer',
-            'book_file' => 'nullable|mimes:pdf|max:2048',
+            'book_file' => 'nullable|mimes:pdf|max:1048576',
             'cover_image' => 'required|mimes:jpeg,jpg,png|max:1024',
         ]);
 
